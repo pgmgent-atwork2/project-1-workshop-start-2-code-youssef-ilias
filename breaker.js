@@ -7,7 +7,7 @@ let context;
 //players
 let playerWidth = 80; //500 for testing, 80 normal
 let playerHeight = 10;
-let playerVelocityX = 10; //move 10 pixels each time
+let playerVelocityX = 50; //move 10 pixels each time
 
 let player = {
     x : boardWidth/2 - playerWidth/2,
@@ -20,8 +20,8 @@ let player = {
 //ball
 let ballWidth = 10;
 let ballHeight = 10;
-let ballVelocityX = 3; //15 for testing, 3 normal
-let ballVelocityY = 2; //10 for testing, 2 normal
+let ballVelocityX = 9; //15 for testing, 3 normal
+let ballVelocityY = 6; //10 for testing, 2 normal
 
 let ball = {
     x : boardWidth/2,
@@ -107,7 +107,7 @@ function update() {
     }
 
     //blocks
-    context.fillStyle = "skyblue";
+    context.fillStyle = "red";
     for (let i = 0; i < blockArray.length; i++) {
         let block = blockArray[i];
         if (!block.break) {
